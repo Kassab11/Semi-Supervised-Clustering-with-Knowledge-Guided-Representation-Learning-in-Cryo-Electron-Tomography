@@ -1,12 +1,10 @@
-# AITom-Based Subtomogram Generation and Semi-Supervised DISCA Data Preparation
+# AITom-Based Subtomogram Generation 
 
 Generate simulated cryo-electron tomography subtomograms from PDB structures and prepare pickle files for semi-supervised DISCA-style clustering experiments.
 
 This folder contains modified data-generation utilities based on the AITom project. The workflow was adapted to directly generate reconstructed subtomograms from PDB structures and save the output as Python pickle files for downstream semi-supervised clustering.
 
-## Suggested GitHub description
 
-**AITom/Situs-based pipeline for generating cryo-ET subtomograms from PDB structures and preparing pickle inputs for semi-supervised DISCA clustering.**
 
 ## Contents
 
@@ -18,14 +16,14 @@ scripts/
   reconstruction__util.py                    # Local reconstruction utility helper adapted from AITom
 NOTICE.md                                    # Attribution and modification notice
 requirements.txt                            # Python dependencies used directly by the scripts
-.gitignore
+
 ```
 
 ## Important directory requirement
 
 Keep all files in `scripts/` together in the same directory.
 
-`generate_aitom_subtomograms.py` imports the local module `reconstruction__simple_convolution.py`, and `reconstruction__simple_convolution.py` imports `reconstruction__util.py`. If these files are separated, Python may not find the local imports.
+`generate_aitom_subtomograms.py` imports the local module `reconstruction__simple_convolution.py`, and `reconstruction__simple_convolution.py` imports `reconstruction__util.py`. If these files are separated, Python will not find the local imports.
 
 Recommended layout:
 
