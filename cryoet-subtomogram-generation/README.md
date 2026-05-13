@@ -15,7 +15,7 @@ scripts/
   reconstruction__simple_convolution.py      # Local reconstruction simulation helper adapted from AITom
   reconstruction__util.py                    # Local reconstruction utility helper adapted from AITom
 NOTICE.md                                    # Attribution and modification notice
-requirements.txt                            # Python dependencies used directly by the scripts
+requirements.txt                             # Python dependencies used directly by the scripts
 
 ```
 
@@ -25,21 +25,7 @@ Keep all files in `scripts/` together in the same directory.
 
 `generate_aitom_subtomograms.py` imports the local module `reconstruction__simple_convolution.py`, and `reconstruction__simple_convolution.py` imports `reconstruction__util.py`. If these files are separated, Python will not find the local imports.
 
-Recommended layout:
 
-```text
-your-repository/
-  scripts/
-    generate_aitom_subtomograms.py
-    prepare_disca_semisupervised_inputs.py
-    reconstruction__simple_convolution.py
-    reconstruction__util.py
-  pdbs/
-    1bxn.pdb
-    1qvr.pdb
-    ...
-  outputs/
-```
 
 ## Attribution
 
@@ -54,41 +40,31 @@ Main modification in this folder: the generation workflow was adapted to directl
 {"id": pdb_id, "uuid": uuid_unique, "v": subtomogram_volume}
 ```
 
-## License
-
-The whole GitHub repository is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. Because the scripts in this folder are adapted from AITom, which is GPL-3.0, these scripts are also distributed under GPL-3.0 as part of the repository license.
-
-Suggested wording for this folder:
-
-> The scripts in this folder are adapted from AITom, which is licensed under GPL-3.0. The whole repository is distributed under the GNU General Public License v3.0.
 
 ## Main dependencies
 
-The scripts use:
-
-- Python 3
-- NumPy
-- AITom
-- Situs 3.2, especially the `pdb2vol` executable
-- Python standard libraries: `argparse`, `pickle`, `subprocess`, `tempfile`, `uuid`, and `os`
-- Local reconstruction files included in this folder:
-  - `reconstruction__simple_convolution.py`
-  - `reconstruction__util.py`
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+      - numpy==1.20.0
+      - scipy==1.10.1
+      - mrcfile==1.5.4
+      - pillow==10.4.0
+      - matplotlib==3.7.5
+      - scikit-learn==1.3.2
+      - numba==0.58.1
+      - pyyaml==6.0.3
 
 `generate_aitom_subtomograms.py` relies on AITom modules for volume I/O, resizing, rotations, multiprocessing, missing wedge simulation, CTF simulation, and image saving. It also calls Situs `pdb2vol` to convert PDB structures into density maps.
 
 ## Installation notes
 
-1. Install AITom following the official instructions from https://github.com/xulabs/aitom.
 2. Install Situs 3.2 and confirm that `pdb2vol` is available.
 3. Keep the four Python scripts in the same directory.
 4. Install the Python packages listed in `requirements.txt`.
 
-Example:
 
-```bash
-pip install -r requirements.txt
-```
 
 ## Input data
 
@@ -171,8 +147,7 @@ python scripts/prepare_disca_semisupervised_inputs.py \
   --output_dir ./outputs/prepared \
   --output_prefix subtomograms \
   --labeled_fraction 0.1 \
-  --labeled_class_fraction 1.0 \
-  --random_seed 12
+  --labeled_class_fraction 0.8 \
 ```
 
 This writes:
@@ -184,14 +159,6 @@ subtomograms_labeled_labels.pickle     # labels for selected labeled samples
 subtomograms_all_labels_gt.pickle      # full ground-truth label array
 ```
 
-By default, the script adds a trailing channel dimension. To disable this:
-
-```bash
-python scripts/prepare_disca_semisupervised_inputs.py \
-  --input_pickle ./outputs/subtomograms.pickle \
-  --output_dir ./outputs/prepared \
-  --no_channel_dim
-```
 
 ## Class ID mapping
 
@@ -232,10 +199,8 @@ The generated subtomogram pickle file contains a list of dictionaries:
 
 `prepare_disca_semisupervised_inputs.py` converts this list into arrays suitable for semi-supervised clustering.
 
-## Recommended citation / acknowledgment text
+## citation/acknowledgment 
 
 If you use these scripts, please acknowledge AITom as the original source of the data-generation code and state that this folder contains modifications for direct subtomogram generation and pickle export.
 
-Suggested wording:
 
-> This code is adapted from the AITom project (https://github.com/xulabs/aitom). We modified the workflow to directly generate reconstructed subtomograms from PDB structures and save them as pickle files for semi-supervised DISCA experiments.
