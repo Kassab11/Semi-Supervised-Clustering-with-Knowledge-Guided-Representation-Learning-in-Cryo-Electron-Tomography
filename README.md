@@ -1,7 +1,5 @@
 # Semi-Supervised-Clustering-with-Knowledge-Guided-Representation-Learning-in-Cryo-Electron-Tomography
 Semi-supervised clustering framework for cryo-electron tomography subtomograms using knowledge-guided representation learning, label-anchored GMM clustering, PCA voting, and confidence-based refinement for guided structural discovery.
-
-
 ## Dataset
 
 The processed Dragonfly CryoET dataset used in this project is available on Hugging Face:
@@ -24,6 +22,8 @@ Dragonfly_CryoET_dataset/
 │   └── processed tomogram files
 └── annotation/
     └── generated ground-truth masks
+```
+
 
 ## Example command
 
