@@ -13,11 +13,7 @@ This project uses multiple cryo-ET datasets, including synthetic subtomograms ge
 
 ## Synthetic Subtomogram Data Generated with AITOM
 
-To generate your own subtomograms from PDB files, see the directory:
-
-```text
-cryoet-subtomogram-generation/
-```
+To generate your own subtomograms from PDB files, see the [`cryoet-subtomogram-generation/`](./cryoet-subtomogram-generation/) directory.
 
 The 23-class synthetic cryo-ET subtomogram dataset generated for this project is available on Hugging Face:
 
