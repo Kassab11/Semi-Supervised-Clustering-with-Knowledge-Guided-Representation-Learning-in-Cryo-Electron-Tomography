@@ -4,33 +4,6 @@ Semi-supervised clustering framework for cryo-electron tomography subtomograms u
 
 
 
-dependincies:
-
-```text
-python 3.8
-numpy
-scipy
-scikit-learn
-scikit-image
-matplotlib
-pandas
-tqdm
-torch
-torchvision
-torchaudio
-umap-learn
-mrcfile
-```
-
-The uploaded environment uses CUDA 12.4 PyTorch builds:
-
-```text
-torch==2.4.0+cu124
-torchvision==0.19.0+cu124
-torchaudio==2.4.0+cu124
-```
-
-
 ## Example command
 
 Example for a 23-class simulated dataset with 1% labels from the known classes:
