@@ -4,7 +4,7 @@ Semi-supervised clustering framework for cryo-electron tomography subtomograms u
 
 The processed Dragonfly CryoET dataset used in this project is available on Hugging Face:
 
-**Hugging Face Dataset:** [kassab11/Dragonfly_CryoET_dataset](https://huggingface.co/datasets/kassab11/Dragonfly_CryoET_dataset)
+**Hugging Face Link:** [kassab11/Dragonfly_CryoET_dataset](https://huggingface.co/datasets/kassab11/Dragonfly_CryoET_dataset)
 
 This dataset is based on the original Dryad dataset:
 
