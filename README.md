@@ -4,16 +4,7 @@ Semi-supervised clustering framework for cryo-electron tomography subtomograms u
 
 
 
-## Environment
-
-The provided Conda environment was created with Python 3.8 and CUDA-enabled PyTorch. To recreate it:
-
-```bash
-conda env create -f kassab_environment.yml
-conda activate kassab
-```
-
-Core packages used by the model include:
+dependincies:
 
 ```text
 python 3.8
