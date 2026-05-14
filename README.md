@@ -12,7 +12,7 @@ Heebner, J.; Purnell, C.; Hylton, R. K.; Marsh, M.; Grillo, M. A.; Swulius, M. T
 *Deep learning training data (JOVE)*. Dryad, 2022.  
 DOI: https://doi.org/10.5061/dryad.rxwdbrvct
 
-For this repository, we processed the original cryo-ET data and generated corresponding ground-truth annotation masks for use in segmentation and analysis workflows.
+We processed the original cryo-ET data and generated corresponding ground-truth annotation masks for use in segmentation and analysis workflows.
 
 The dataset is organized as:
 
