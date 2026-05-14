@@ -6,7 +6,6 @@ Semi-supervised clustering framework for cryo-electron tomography subtomograms u
 
 ## Example command
 
-Example for a 23-class simulated dataset with 1% labels from the known classes:
 
 ```bash
 python model.py \
