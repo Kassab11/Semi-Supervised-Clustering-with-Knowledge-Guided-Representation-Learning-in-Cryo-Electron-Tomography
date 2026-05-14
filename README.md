@@ -2,7 +2,28 @@
 Semi-supervised clustering framework for cryo-electron tomography subtomograms using knowledge-guided representation learning, label-anchored GMM clustering, PCA voting, and confidence-based refinement for guided structural discovery.
 
 
+## Dataset
 
+The processed Dragonfly CryoET dataset used in this project is available on Hugging Face:
+
+**Hugging Face Dataset:** [kassab11/Dragonfly_CryoET_dataset](https://huggingface.co/datasets/kassab11/Dragonfly_CryoET_dataset)
+
+This dataset is based on the original Dryad dataset:
+
+Heebner, J.; Purnell, C.; Hylton, R. K.; Marsh, M.; Grillo, M. A.; Swulius, M. T.  
+*Deep learning training data (JOVE)*. Dryad, 2022.  
+DOI: https://doi.org/10.5061/dryad.rxwdbrvct
+
+For this repository, we processed the original cryo-ET data and generated corresponding ground-truth annotation masks for use in segmentation and analysis workflows.
+
+The dataset is organized as:
+
+```text
+Dragonfly_CryoET_dataset/
+├── tomogram/
+│   └── processed tomogram files
+└── annotation/
+    └── generated ground-truth masks
 
 ## Example command
 
