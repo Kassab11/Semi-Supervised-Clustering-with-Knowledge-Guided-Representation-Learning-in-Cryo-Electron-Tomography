@@ -3,6 +3,10 @@
 A semi-supervised clustering framework for cryo-electron tomography subtomograms.  
 The framework combines knowledge-guided representation learning, label-anchored Gaussian Mixture Model clustering, PCA-based voting, and confidence-based refinement for guided structural discovery.
 
+## Citation
+
+Kassab M, Cao C, Yao V, Zeng X, Ho Q, Xu M (2026) Semi-supervised clustering with knowledge-guided representation learning in cryo-electron tomography. *PLOS Digit Health* 5(8): e0001619. https://doi.org/10.1371/journal.pdig.0001619
+
 ---
 
 ## Datasets
