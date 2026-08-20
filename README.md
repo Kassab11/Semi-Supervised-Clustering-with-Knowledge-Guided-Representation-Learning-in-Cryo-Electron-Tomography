@@ -3,9 +3,6 @@
 A semi-supervised clustering framework for cryo-electron tomography subtomograms.  
 The framework combines knowledge-guided representation learning, label-anchored Gaussian Mixture Model clustering, PCA-based voting, and confidence-based refinement for guided structural discovery.
 
-## Citation
-
-Kassab M, Cao C, Yao V, Zeng X, Ho Q, Xu M (2026) Semi-supervised clustering with knowledge-guided representation learning in cryo-electron tomography. *PLOS Digit Health* 5(8): e0001619. https://doi.org/10.1371/journal.pdig.0001619
 
 ---
 
@@ -194,3 +191,8 @@ Aligned clustering accuracy, when K matches true_k
 - Ground-truth labels are optional and are used only for evaluation.
 - The `true_k` argument is used only for aligned accuracy reporting.
 - The framework is designed for semi-supervised structural discovery in cryo-electron tomography subtomogram datasets.
+
+---
+## Citation
+
+Kassab M, Cao C, Yao V, Zeng X, Ho Q, Xu M (2026) Semi-supervised clustering with knowledge-guided representation learning in cryo-electron tomography. *PLOS Digit Health* 5(8): e0001619. https://doi.org/10.1371/journal.pdig.0001619
